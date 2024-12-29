@@ -1,0 +1,32 @@
+﻿@model mytasks
+@{
+}
+<form class="form-control mb-3" asp-action="Update" asp-controller="MYTASKS">
+    <div class="form-control mb-3">
+        <label asp-for="Title">Task Name</label>
+        <input asp-for="Title">
+    </div><div class="form-control mb-3">
+        <label asp-for="Description">Task Description</label>
+        <input asp-for="Description">
+    </div>
+    <div class="form-control mb-3">
+        <label asp-for="Status">Task Status</label>
+        <input asp-for="Status">
+    </div><div class="form-control mb-3">
+        <label asp-for="Propirty">Task Propirty</label>
+        <input asp-for="Propirty">
+    </div>
+    <div class="form-control mb-3">
+        <label asp-for="Deadline">Task Deadline</label>
+        <input asp-for="Deadline">
+    </div><div class="form-control mb-3">
+        <label asp-for="projectID">Task projectID</label>
+        <input asp-for="projectID">
+    </div>
+    <div class="form-control mb-3">
+        <label asp-for="teamMemberID">Task teamMemberID</label>
+        <input asp-for="teamMemberID">
+    </div><div class="form-control mb-3">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>

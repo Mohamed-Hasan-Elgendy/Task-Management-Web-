@@ -1,0 +1,21 @@
+﻿@model myprojects
+@{
+}
+<form class="form-control mb-3" asp-action="Add" asp-controller="MYPROJECTS">
+    <div class="form-control mb-3">
+        <label asp-for="Name">Project Name</label>
+        <input asp-for="Name">
+    </div>
+    <div class="form-control mb-3">
+        <label asp-for="Startdate">Project's Startdate</label>
+        <input asp-for="Startdate">
+    </div>
+    <div class="form-control mb-3">
+        <label asp-for="Enddate">Project's Enddate</label>
+        <input asp-for="Enddate">
+    </div>
+    </div><div class="form-control mb-3">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+

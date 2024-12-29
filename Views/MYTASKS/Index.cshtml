@@ -1,0 +1,44 @@
+﻿@model IEnumerable< mytasks>
+@{
+}
+<h1>Tasks</h1>
+<hr />
+
+<a class="btn btn-primary" asp-action="Add" asp-controller="MYTASKS">Add New Task</a>
+</p>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Task Name</th>
+            <th>Task Description</th>
+            <th>Task Status</th>
+            <th>Task Propirty</th>
+            <th>Task Deadline</th>
+            <th>Task Project</th>
+            <th>Task Team Member</th>
+            <th>Options</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Title</td>
+                <td>@item.Description</td>
+                <td>@item.Status</td>
+                <td>@item.Propirty</td>
+                <td>@item.Deadline</td>
+                <td>@item.projectID</td>
+                <td><a asp-action="DEtails" asp-controller="MYTEAMMEMBER">
+                    @item.teamMemberID
+					</a>
+				</td>
+                <td>
+                <a class="btn btn-primary" asp-action="Update" asp-route-id="@item.Id">Update</a>
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
